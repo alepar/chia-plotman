@@ -25,6 +25,7 @@ chia init
 pip install --force-reinstall git+https://github.com/ericaltendorf/plotman@main
 
 # Install supervisor
+apt install -y psmisc
 pip install supervisor
 
 cat <<EOF > ${script_dir}/supervisor.yaml
