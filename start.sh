@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -Eeuo pipefail
+set -Eeuxo pipefail
 
 if [ ! -f "config.yaml" ]; then
 	echo "Please run 'cp configs/config.example.yaml config.yaml', edit, and rerun"
@@ -20,6 +20,10 @@ if [ ! -d "$store_dir" ]; then
 fi
 
 docker build -t plotman ./docker-plotman
-docker --rm -d --name plotman -v ${tmp_dir}:/plots/tmp -v ${store_dir}:/plots/store run plotman
+docker run --rm -d --name plotman \
+	-v ${tmp_dir}:/plots/tmp \
+	-v ${store_dir}:/plots/store \
+	-v $(pwd)/config.yaml:/root/config.yaml \
+	plotman
 
 echo "Started. Run './interactive.sh' for progress"

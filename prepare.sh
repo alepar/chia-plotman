@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -Eeuo pipefail
+set -Eeuxo pipefail
 
 # Setup Docker
 apt-get update && apt-get install -y \

@@ -1,5 +1,5 @@
 #!/bin/bash
 
-set -Eeuo pipefail
+set -Eeuxo pipefail
 
-docker exec -it --name plotman /bin/bash -c 'cd /chia-blockchain && source ./activate && plotman interactive'
+docker exec -it plotman /bin/bash -c 'cd /chia-blockchain && source ./activate && plotman interactive'
