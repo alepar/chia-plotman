@@ -3,7 +3,7 @@
 set -Eeuxo pipefail
 
 if [ ! -f "config.yaml" ]; then
-	echo "Please run 'cp configs/config.example.yaml config.yaml', edit, and rerun"
+	echo "Please run 'cp configs/config.example.yaml config.yaml', edit, and rerun './start.sh'"
 	exit 1
 fi
 
