@@ -1,6 +1,6 @@
 #!/bin/bash
 
-apt update && apt install -y git \
+apt update && apt install -y git neovim \
 && git clone https://github.com/alepar/chia-plotman.git \
 && cd chia-plotman \
 && (
