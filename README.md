@@ -1,5 +1,5 @@
 ### Running on the host
-Assuming you're on Debian 10, do:
+Assuming you're on Debian 10 in bash, do:
 ```
-/bin/bash -c "$(wget -O - https://raw.githubusercontent.com/alepar/chia-plotman/HEAD/install.sh)"
+wget -O /tmp/install.sh https://raw.githubusercontent.com/alepar/chia-plotman/HEAD/install.sh && source /tmp/install.sh
 ```
