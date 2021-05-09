@@ -19,7 +19,6 @@ if [ ! -d "$store_dir" ]; then
 	exit 1
 fi
 
-docker build -t plotman ./docker-plotman
 docker run --rm -d --name plotman \
 	-v ${tmp_dir}:/plots/tmp \
 	-v ${store_dir}:/plots/store \
