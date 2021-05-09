@@ -5,6 +5,5 @@ apt update && apt install -y git \
 && cd chia-plotman \
 && (
 	./prepare.sh
-	./build.sh
 	./start.sh
 )
