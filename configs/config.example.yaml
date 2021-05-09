@@ -1,0 +1,15 @@
+# Your public keys for plotting
+farmer_pk: "..."
+pool_pk: "..."
+
+# How many jobs to start. Ensure each job has:
+#  - 4GB memory
+#  - 1-2 CPU cores
+#  - 280-300GiB of disk in tmp_dir
+concurrency: 4
+
+# Your storage paths
+## Fast disk used for creating plots
+tmp_dir: /mnt/fastdisk
+## Slow disk used for storing created plots
+store_dir: /mnt/slowdisk
