@@ -5,11 +5,11 @@ set -Eeuxo pipefail
 script_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd -P)
 
 # Make swap
-if [ ! -f "/swapfile" ]; then
-	dd if=/dev/zero of=/swapfile bs=1M count=4096
-	mkswap /swapfile
-	swapon /swapfile
-fi
+# if [ ! -f "/swapfile" ]; then
+# 	dd if=/dev/zero of=/swapfile bs=1M count=4096
+# 	mkswap /swapfile
+#	swapon /swapfile
+#fi
 
 # Install Chia
 rm -rf ./chia-blockchain
@@ -22,6 +22,7 @@ sh install.sh
 chia init
 
 # Install Plotman
+apt install -y gcc python3-dev
 pip install --force-reinstall git+https://github.com/ericaltendorf/plotman@main
 
 # Install supervisor
