@@ -22,7 +22,7 @@ sh install.sh
 chia init
 
 # Install Plotman
-apt install -y gcc python3-dev
+apt install -y gcc python3-dev htop
 pip install --force-reinstall git+https://github.com/ericaltendorf/plotman@main
 
 # Install supervisor
